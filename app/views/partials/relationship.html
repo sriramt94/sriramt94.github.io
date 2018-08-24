@@ -1,0 +1,51 @@
+<style>
+
+.hello { background-color: #3C7193;}
+</style>
+
+<div  ng-controller="PortfolioController as vm">
+
+  <md-content class="md-padding hello">
+  
+<div layout="row" layout-xs="column" layout-align="space-between center">
+   <div>
+    <p><font style="font-size:16px" color='white'>Investment Amount:
+      <b>{{CurrentMarketValue | number}}</b>
+   </font> </p>
+    <p><font style="font-size:16px" color='white'>Unrealized Gain&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp:
+      <b>{{unRelGain | number}}</b>
+   </font> </p> </div> 
+    
+     <div>
+    <p><font style="font-size:16px" color='white'>Realized Gain:
+      <b>{{relGain | number}}</b>
+   </font> </p>
+    <p><font style="font-size:16px" color='white'>Total Gain&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp:
+      <b>{{totalGain | number}}</b>
+   </font> </p>   </div> 
+    
+    
+    
+    
+    
+    
+     </div>
+    
+    
+    
+  </md-content>
+
+<!--<md-content class="md-padding">
+  
+<div layout="row" layout-align="space-between center">
+    <p>Realized Gain:
+      <b>{{vm.tg}}</b>
+    </p>
+    <p>Total Gain:
+      <b>{{vm.tg}}</b>
+    </p>   </div>
+  </md-content>
+  
+  
+</div>
+-->

@@ -1,0 +1,299 @@
+<style>
+::-webkit-scrollbar {
+    width: 0.4em;
+}
+ 
+::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+}
+ 
+::-webkit-scrollbar-thumb {
+  background-color: #000000;
+  outline: 1px solid #003263;
+}
+
+.hello { background-color: #3C7193;}
+.success { background-color: #003263;}
+.md-button:{
+  background-color: #3C7193;
+}
+
+
+
+.button {
+ 
+	background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 5px 18px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 15px;
+	width:337px;
+	
+    margin: 5px 2px;
+    -webkit-transition-duration: 0.5s; /* Safari */
+    transition-duration: 0.4s;
+    cursor: pointer;
+
+
+}
+
+.button2 {
+    background-color: #3C7193; 
+    color: black; 
+    border: 2px solid #008CBA;
+}
+
+.button2:hover {
+    background-color: #008CBA;
+    color: white;
+}
+
+.button3 {
+    background-color: #3C7193; 
+    color: black; 
+    border: 2px solid #C4E3F3;
+}
+
+.button3:hover {
+    background-color: #C4E3F3;
+    color: black;
+}
+
+
+.button5 {
+    background-color: #3C7193;
+    color: black;
+    border: 2px solid #808080;
+}
+
+.button5:hover {
+    background-color: #808080;
+    color: white;
+}
+md-divider{
+
+background-color: #ffffff;
+
+}
+
+[ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
+  display: none !important;
+}
+/* #warning-message { display: none; }
+    @media only screen and (orientation:portrait){
+        #wrapper { display:none; }
+        #warning-message { display:block; }
+    }
+    @media only screen and (orientation:landscape){
+        #warning-message { display:none; }
+    } */
+</style>
+
+<!--  <div id="wrapper"> -->
+<div ng-controller="PortfolioController as vm" ng-cloak>
+
+
+
+<!-- IPAD -->
+
+
+
+<md-toolbar style="background-color: #000000; " >
+      <div class="md-toolbar-tools" layout-align="space-between center">
+      
+         <md-button aria-label="Go Back" ui-sref="home.profile" >
+      <md-icon md-menu-origin="" md-svg-icon="assets/images/home.svg"></md-icon>
+        </md-button>
+		<h4>
+		<font color='white'>{{baseName}}</font>
+		</h4>
+		
+       <div layout="row"layout-align="start center">
+                <a href="">
+                <md-icon md-svg-icon="assets/images/Twitter.svg"></md-icon>
+      </a>
+&nbsp;
+         
+         <a href="">
+          <md-icon md-svg-icon="assets/images/gmail.svg"></md-icon>
+        </a>
+   &nbsp;
+    <!--   <a href="">
+          <md-icon md-svg-icon="assets/images/skype.svg"></md-icon>
+        </a> 
+&nbsp;  -->  
+          <a href="">
+          <md-icon md-svg-icon="assets/images/maps.svg"></md-icon>
+        </a>
+&nbsp; 
+       <a>
+          <md-icon md-svg-icon="assets/images/questionmark.svg"></md-icon>
+        </a>
+&nbsp;
+            <div  layout-align="end center" layout="column">
+   
+  <div  layout-wrap="" layout="row" layout-fill="" layout-align="space-between center" >
+      
+      <div layout="column" layout-align="center center">
+        
+        <md-menu md-offset="0 -7">
+          <md-button class="md-icon-button" ng-click="$mdOpenMenu($event)">
+            <md-icon md-svg-icon="assets/images/dts3.svg"></md-icon>
+          </md-button>
+          <md-menu-content width="2" style=" background-color: #003263">
+            <md-menu-item >
+              <md-button  style=" background-color: #003263"  ng-click="">   <font color='white'> Settings</font> </md-button>
+               
+            </md-menu-item>
+			<md-divider></md-divider>
+            <md-menu-item >
+              <md-button  style=" background-color: #003263" ui-sref="login"  ng-click="">  <font color='white'>  Logout </font></md-button>
+               
+           </md-menu-item>
+          </md-menu-content>
+        </md-menu>
+      </div>
+    </div>
+  </div> 
+        </div>
+      </div>
+    </md-toolbar> 
+
+<div   layout="row" layout-md="row"layout-wrap   style=" background-color:#003263"  layout-sm="row" layout-xs="column" >
+     <!-- required but hided -->
+    
+        
+      <div layout="column" layout-align="center center" >
+        
+        <md-menu md-offset=""  style=" background-color: #003263">
+          <md-button class="md-icon-button"  ng-click="$mdOpenMenu($event)">
+            <md-icon md-menu-origin="" md-svg-icon="assets/images/menu.svg"></md-icon>
+          </md-button>
+          <md-menu-content width="2" style=" background-color: #003263">
+            <md-menu-item >
+              <md-button style=" background-color: #003263" ng-click="asset('Asset')"> <font color='white'> Assets</font> </md-button>
+               
+            </md-menu-item>
+<md-divider></md-divider>
+            <md-menu-item >
+              <md-button  style=" background-color: #003263" ng-click="product('Product')"><font color='white'>  Products </font></md-button>
+               
+           </md-menu-item>
+		   <md-divider></md-divider>
+            <md-menu-item >
+              <md-button  style=" background-color:#003263" ng-click="liability('Liability')"><font color='white'>  Liabilities </font></md-button>
+               
+           </md-menu-item>
+          </md-menu-content>
+        </md-menu>
+      </div>
+
+
+	<div layout= "row" flex >
+      <md-header flex="90" flex-xs="90">
+          <p><font color='white'>&nbsp;&nbsp;&nbsp;Relationship Value</font></p>
+         </md-header>
+    <md-header flex ="18" flex-xs="18">
+          <p><font color='white'>&nbsp;&nbsp;&nbsp;&nbsp;{{investmentAmt | number}}</font></p>
+         </md-header>
+         </div>
+        
+</div>
+
+<div layout="row" ; layout-sm="column" layout-md="row" layout-xs="column">
+ 
+ 
+ <div flex layout="column" layout-md="column" layout-xs="column">
+ <div  ng-include='"app/views/partials/relationship.html"' class="relationship"></div>
+
+
+<!--style="height:470px" -->
+
+<div layout="row"   layout-sm="row" layout-md="row" layout-xs="column" >
+     
+ <panel-widget ng-show="assets" flex="22" flex-sm="30" flex-xs="20" flex-md="25" title="Portfolio"  template="app/views/partials/usage.html"  class="hello " ng-cloak></panel-widget>
+ <!-- ipad -->
+ <panel-widget  ng-show="products" flex="22" flex-sm="30" flex-xs="20" flex-md="33" title="Portfolio"   template="app/views/partials/usage1.html"class="hello " ng-cloak></panel-widget>
+   
+   <panel-widget ng-show="liabilities" flex="22" flex-sm="30" flex-xs="20" flex-md="25" title="Portfolio"  template="app/views/partials/usage2.html"class="hello" ng-cloak></panel-widget>
+
+
+
+
+  
+  <panel-widget  ng-show="assets" flex="80" flex-md="75" flex-sm="70" title="Asset type" style="height:475px" template="AssetTable.html" class=" hello " ng-cloak ></panel-widget>
+    
+    <panel-widget  ng-show="products" flex="85" flex-md="" flex-sm="70"   title="Asset type" style="height:470px" template="ProductTable.html" class=" hello " ng-cloak></panel-widget>
+	<panel-widget  ng-show="liabilities"  flex="80" flex-md="75" flex-sm="70" title="Asset type" style="height:470px" template="LiabilityTable.html" class="  hello"ng-cloak ></panel-widget>
+
+
+
+</div>
+</div>
+</div>
+</div>
+
+<div  layout ="row" layout-xs="column" hide-gt-lg flex="100" ng-cloak>
+
+<button style="background-color:#003263" class="button button5" ui-sref="home.personal"><md-icon md-svg-src="assets/images/accc.svg"></md-icon><font color='white'>  Profile</font></button>
+	
+	<button style="background-color:#3C7193" class="button button5" ui-sref="home.dashboard"> <md-icon md-svg-src="assets/images/dashboardw.svg"></md-icon>&nbsp;<font color='white'> Portfolio</font> </button>
+	<button style="background-color:#003263" class="button button5" ui-sref="home.transactions" ><md-icon md-svg-src="assets/images/moneyw.svg"></md-icon> <font color='white'> Transactions</font> </button>
+	<button style="background-color:#003263" class="button button5" ui-sref="home.reports" ><md-icon md-svg-src="assets/images/reportsw.svg"></md-icon> <font color='white'> Reports</font> </button>
+	<button  style="background-color:#003263"class="button button5" ui-sref="home.calender" ><md-icon md-svg-src="assets/images/cw.svg"></md-icon> <font color='white'> Calendar</font></button>
+	<button style="background-color:#003263" class="button button5" ui-sref="home.alerts"> <md-icon md-svg-src="assets/images/warning.svg"></md-icon>&nbsp;<font color='white'> Alerts</font> </button>
+	
+
+</div>
+
+
+<!--  
+<div id="warning-message">
+ 
+ </br>
+  </br>
+   </br>
+    </br>
+     </br>
+      </br>
+       </br>
+        </br>
+        
+<h1><center><font color='white'>Please turn your device to Landscape mode for better view</font></center></h1>
+ 
+</div>
+
+
+-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

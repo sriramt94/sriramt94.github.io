@@ -1,0 +1,18 @@
+<!--?xml version="1.0" standalone="no"?-->
+
+<svg xmlns="http://www.w3.org/2000/svg" width="300.000000pt" height="300.000000pt" viewBox="0 0 300.000000 300.000000" preserveAspectRatio="xMidYMid meet">
+<g transform="translate(0.000000,300.000000) scale(0.100000,-0.100000)" fill="#040404" stroke="none">
+<path class="node" id="node1" d="M452 2820 c-138 -50 -231 -150 -266 -285 -21 -78 -20 -146 2 -220 34
+-109 107 -196 214 -252 50 -26 60 -28 178 -28 118 0 128 2 179 28 120 63 197
+170 221 305 32 176 -68 356 -238 435 -88 40 -208 47 -290 17z" transform="scale(1) translate(30,165) rotate(-25 444.9666748046875 361.3333435058594)" style="position: relative; fill: rgb(4, 4, 4); stroke: none;"></path>
+<path class="node" id="node2" d="M1465 1912 c-59 -6 -156 -44 -206 -82 -90 -68 -142 -159 -157 -275
+-16 -125 22 -238 109 -330 73 -77 153 -115 257 -122 142 -10 249 32 341 132
+168 185 118 499 -100 622 -67 38 -173 62 -244 55z" transform="scale(1) translate(-50,0) rotate(0 570.6999816894531 486.1999969482422)" style="position: relative;"></path>
+<path class="node" id="node3" d="M2310 966 c-95 -27 -164 -75 -221 -155 -116 -161 -101 -376 35 -519
+52 -54 103 -84 190 -111 81 -25 112 -26 191 -6 175 45 284 160 315 332 11 60
+10 81 -4 145 -21 93 -45 140 -104 201 -106 109 -260 152 -402 113z" transform="scale(1) translate(-960,100) rotate(0 686.7666625976562 609.6666870117188)" style="position: relative;"></path>
+</g>
+<g transform="translate(0.000000,300.000000) scale(0.100000,-0.100000)" fill="#A1A1A1" stroke="none">
+
+</g>
+</svg>

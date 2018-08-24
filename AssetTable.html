@@ -1,0 +1,467 @@
+<script src='//production-assets.codepen.io/assets/common/stopExecutionOnTimeout-58d22c749295bca52f487966e382a94a495ac103faca9206cbd160bdf8aedf2a.js'></script>
+<script src='//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+  <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+
+<style>
+
+::-webkit-scrollbar {
+    width: 0.4em;
+}
+ 
+::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+}
+ 
+::-webkit-scrollbar-thumb {
+  background-color: #000000;
+  outline: 1px solid #003263;
+}
+
+.container {
+  background: #3C7193;
+  padding: 0px;
+  overflow: hidden;
+  float: left;
+margin:auto;
+width:100%;
+}
+
+
+h5{
+-webkit-text-stroke-width: 0.1px;
+   -webkit-text-stroke-color: black;
+color: white;
+text-align: left;
+}
+h4{
+
+color: white;
+text-align: left;
+
+
+}
+h6{
+color: white;
+}
+.box1{
+width: ;
+height: 200px;
+}
+
+.square{
+width: 20px;
+	height: 20px;
+	background: #308798;
+}
+.square1{
+width: 20px;
+	height: 20px;
+	background: #308798;
+}
+
+
+
+
+.progress {
+background-color:#003263;
+border-radius:7px;
+height:27px;
+overflow:hidden;
+width:200px;
+}
+
+.bar1 {
+background-color:#006400;
+border-radius:7px;
+margin: 2px 0 0 0;
+color:#fff;
+float:left;
+height:100%;
+position:relative;
+text-align:center;
+
+}
+.bar {
+background-color:#427ae3;
+border-radius:7px;
+margin: 2px 0 0 0;
+color:#fff;
+float:left;
+height:100%;
+position:relative;
+text-align:center;
+
+}
+
+.bar > .percent {
+font-size:.9rem;
+left:8px;
+position:absolute;
+
+}
+
+.height{
+
+height:460px;
+background-color:#3C7193;
+}
+
+
+.height1{
+
+height:460px;
+background-color:#3C7193;
+}
+h3{
+
+padding:1px 0 12px 0;
+}
+.box{
+width:15px;
+height: 15px;
+}
+md-divider{
+
+background-color:#ffffff;
+}
+.name{
+width: 120px;
+}
+
+.box2{
+width:15px;
+height: 15px;
+}
+.box4{
+width:20vw;
+
+}
+.box5{
+width:5vw;
+
+}
+.box6{
+width:5vw;
+
+}
+
+
+</style>
+
+
+
+
+<!-- IPAD -->
+
+
+<div  hide-lg class="container "  ng-controller="PortfolioController" layout-align="space-around center">
+   <md-content class="height"  style="background-color:#003263">
+   <div layout="row">
+   <p style="font-size:18px"><font color="white">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Asset Name</font></p>
+   
+<p style="font-size:18px"><font color="white">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Current % / Model % </font></p>
+&nbsp;&nbsp;
+   <p style="font-size:18px"><font color="white">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Current / Model</font></p>
+   
+   &nbsp
+   </div>
+   <md-divider></md-divider>
+   <div class="" ng-repeat="give in fund" layout-align="space-around center">
+   
+ <div class="box3" layout="row" layout-align="start center" ng-style="">
+
+<div layout="column">
+<div class="box6"></div>
+
+<div class="box5" layout="row">
+&nbsp
+&nbsp
+&nbsp
+&nbsp
+  <div class="box2" ng-style="{'background-color':'{{give.color}}'}">
+      
+   </div>
+   </div>
+</div>
+
+ 
+
+
+
+ 
+ 
+ 
+ <br>
+ 
+   <div class="name box4" layout="column">
+    <p><font color='white'>{{give.astName}}</font></p>
+
+ <!-- <p><font color='white'>Variance:{{give.variance}}</font><p>
+ 
+ -->
+
+</div>
+
+<!-- <div layout="column box5"> -->
+
+
+
+        <div class="box4" layout="row">
+       <!--   <div class="progress" style="background-color:#003263;">
+            <div class="bar" ng-style="{width:{{give.CurrentPerc}} + '%'}">
+             
+                <span class="percent" >{{give.CurrentPerc}}%</span>
+               
+            </div>
+			
+        </div>
+        &nbsp
+        &nbsp
+        &nbsp
+		 <div class="progress"  style="background-color:#003263;">
+            <div class="bar1" ng-style="{width:{{give.recomPer}}  + '%'}">
+             
+                <span class="percent" ">{{give.recomPer}}%</span>
+               
+            </div>
+        </div> -->
+        
+        
+         <p><font color='white'>{{give.CurrentPerc}}</font></p>
+        &nbsp
+        <p><font color='white'>/</font></p>
+        &nbsp
+        <p><font color='white'>{{give.recomPer}}</font></p>
+        
+        
+        
+		</div>
+<!--        </div> -->
+
+ 
+
+
+<br>
+<div class="box4" layout="row">
+
+    <p><font color='white'>{{give.currentVal}}</font></p>
+    &nbsp   
+    <p><font color='white'>/</font></p>
+&nbsp
+<p><font color='white'>{{give.recomVal}}</font></p>
+
+
+</div>
+&nbsp
+
+<div class="box5">
+<div ng-if="give.astName!=x" ng-style="{'background-color':'' }">
+ <a  ng-click="down(give.astName,give.astCode)" style="text-decoration:none;"><md-icon md-menu-origin="" md-svg-icon="assets/images/eye.svg"></md-icon></a>
+</div>
+
+<div ng-if="give.astName==x" ng-style="{'background-color':'' }">
+ <a  ng-click="up(give.astName)" style="text-decoration:none;"><md-icon md-menu-origin="" md-svg-icon="assets/images/eye-hidden.svg"></md-icon></a>
+</div>
+</div>
+ <div layout="column"  >
+
+
+
+ <a  ng-click="code(give.astCode,'SubAsset',give.astName,'Asset')" ui-sref="home.table" style="text-decoration:none;  color:#000000;"><md-icon md-menu-origin="" md-svg-icon="assets/images/righta.svg"></md-icon></a>
+
+</div>
+
+
+</div>
+
+<div ng-if="give.astName==x" layout="row" layout-align="space-around center">
+
+<font color='white' size="2">   Investment Amount: &nbsp {{valuee.InvVal | number:0}}</font>
+<font color='white' size="2">   Current Value: &nbsp {{valuee.CurVal | number:0}}</font>
+<font color='white' size="2">   Realized Gain:  &nbsp{{valuee.RGain | number:0}}</font>
+<font color='white' size="2">   Unrealized Gain:  &nbsp{{valuee.URGain | number:0}}</font>
+
+</div>
+<br>
+<md-divider ></md-divider>
+</div>
+<!--
+<div layout="row" layout-align="center center">
+<div style="background-color:#427ae3;"class="square">
+</div>
+&nbsp
+&nbsp
+
+<p><b><font color='white'>Current</font></b></p>
+&nbsp
+&nbsp
+&nbsp
+&nbsp
+&nbsp
+&nbsp&nbsp
+&nbsp&nbsp
+&nbsp
+&nbsp
+&nbsp&nbsp
+&nbsp
+<div  style="background-color:#006400" class="square1">
+</div>
+&nbsp
+&nbsp
+<p><b><font color='white'>Model</font></b></p>
+</div> -->
+</md-content>
+</div>
+
+
+
+
+<!-- DESKTOP -->
+
+
+<div hide-md class="container "  ng-controller="PortfolioController" layout-align=" ">
+   <md-content class="height1"  style="background-color:#003263">
+   <div layout="row">
+   <p style="font-size:18px"><font color="white">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Asset Name</font></p>
+   
+<p style="font-size:18px"><font color="white">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Current % / Model % </font></p>
+&nbsp;&nbsp;
+   <p style="font-size:18px"><font color="white">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Current Value / Model Value&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</font></p>
+   
+   &nbsp
+   </div>
+   <md-divider></md-divider>
+   <div class="" ng-repeat="give in fund" layout-align="space-around center">
+   
+ <div class="box3" layout="row" layout-align="start center" ng-style="">
+
+<div layout="column">
+<div class="box6"></div>
+
+<div class="box5" layout="row">
+&nbsp
+&nbsp
+&nbsp
+&nbsp
+  <div class="box2" ng-style="{'background-color':'{{give.color}}'}">
+      
+   </div>
+   </div>
+</div>
+
+ 
+
+
+
+ 
+ 
+ 
+ 
+ 
+   <div class="name box4" layout="column">
+    <p><font color='white'>{{give.astName}}</font></p>
+
+ <!-- <p><font color='white'>Variance:{{give.variance}}</font><p>
+ 
+ -->
+
+</div>
+
+<!-- <div layout="column box5"> -->
+
+
+
+        <div class="box4" layout="row">
+       <!--   <div class="progress" style="background-color:#003263;">
+            <div class="bar" ng-style="{width:{{give.CurrentPerc}} + '%'}">
+             
+                <span class="percent" >{{give.CurrentPerc}}%</span>
+               
+            </div>
+			
+        </div>
+        &nbsp
+        &nbsp
+        &nbsp
+		 <div class="progress"  style="background-color:#003263;">
+            <div class="bar1" ng-style="{width:{{give.recomPer}}  + '%'}">
+             
+                <span class="percent" ">{{give.recomPer}}%</span>
+               
+            </div>
+        </div> -->
+        
+        
+         <p><font color='white'>{{give.CurrentPerc}}</font></p>
+        &nbsp
+        <p><font color='white'>/</font></p>
+        &nbsp
+        <p><font color='white'>{{give.recomPer}}</font></p>
+        
+        
+        
+		</div>
+<!--        </div> -->
+
+ 
+
+
+<br>
+<div class="box4" layout="row">
+
+    <p><font color='white'>{{give.currentVal}}</font></p>
+    <p><font color='white'>/</font></p>
+
+ <p><font color='white'>{{give.recomVal}}</font></p>
+
+
+</div>
+&nbsp
+
+<div class="box5">
+<div ng-if="give.astName!=x" ng-style="{'background-color':'' }">
+ <a  ng-click="down(give.astName,give.astCode)" style="text-decoration:none;"><md-icon md-menu-origin="" md-svg-icon="assets/images/eye.svg"></md-icon></a>
+</div>
+
+<div ng-if="give.astName==x" ng-style="{'background-color':'' }">
+ <a  ng-click="up(give.astName)" style="text-decoration:none;"><md-icon md-menu-origin="" md-svg-icon="assets/images/eye-hidden.svg"></md-icon></a>
+</div>
+</div>
+ <div layout="column"  >
+
+
+
+ <a  ng-click="code(give.astCode,'SubAsset',give.astName,'Asset')" ui-sref="home.table" style="text-decoration:none;  color:#000000;"><md-icon md-menu-origin="" md-svg-icon="assets/images/righta.svg"></md-icon></a>
+
+</div>
+
+
+</div>
+
+<div ng-if="give.astName==x" layout="row" layout-align="space-around center">
+
+<font color='white' size="2">   Investment Amount: &nbsp {{valuee.InvVal | number:0}}</font>
+<font color='white' size="2">   Current Value: &nbsp {{valuee.CurVal | number:0}}</font>
+<font color='white' size="2">   Realized Gain:  &nbsp{{valuee.RGain | number:0}}</font>
+<font color='white' size="2">   Unrealized Gain:  &nbsp{{valuee.URGain | number:0}}</font>
+
+</div>
+<br>
+<md-divider ></md-divider>
+
+</div>
+
+</md-content>
+</div>
+
+	  
+
+
+
+
+
+	  
+
+
+
+

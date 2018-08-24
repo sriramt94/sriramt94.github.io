@@ -1,0 +1,164 @@
+<head>
+<link rel='stylesheet prefetch' href='bower_components/bootstrap/bootstrap.min.css'>
+<link rel="stylesheet" media="screen and (min-device-width: 1451px)" href="cssDesktop/Profiles/Desktop Large.css" />
+<link rel="stylesheet" media="screen and (min-width:  1224px) and (max-width: 1450px)" href="cssDesktop/Profiles/Desktop.css" />
+<link rel="stylesheet" media="screen and (min-width: 1024px) and (max-width: 1224px)" href="cssDesktop/Profiles/Ipad Landscape.css" />
+<link rel="stylesheet" media="screen and (min-width: 760px) and (max-width: 1023px)" href="cssDesktop/Profiles/Ipad.css" />
+<link rel="stylesheet" media="screen and (min-width: 550px) and (max-width: 760px)" href="cssDesktop/Profiles/Mobile Landscape.css" />
+<link rel="stylesheet" media="screen and (min-width: 300px) and (max-width: 550px)" href="cssDesktop/Profiles/Mobile Potrait.css" />
+
+<link rel='stylesheet' href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+.layout-margin, .layout-margin-gt-sm, .layout-margin-gt-sm>*, .layout-margin-md, .layout-margin-md>*, .layout-margin>*, .layout-margin>.flex, .layout-margin>.flex-gt-sm, .layout-margin>.flex-md {
+    margin: 0px;
+}
+
+::-webkit-scrollbar {
+    width: 0.4em;
+}
+ 
+::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+}
+ 
+::-webkit-scrollbar-thumb {
+  background-color: #000000;
+  outline: 1px solid #003263;
+}
+
+ 
+
+</style>
+
+</head>
+
+<div id="listContainer" ng-controller="listController as vm" class="full" ng-cloak>
+     <md-content class="success">
+              <md-toolbar>
+	  
+                  <div class="md-toolbar-tools search1">
+	                  <div layout="row">
+	  
+                           <form>
+	  
+                              <div class="form-group">
+                                   <div class="input-group">
+                                       <div class="input-group-addon" ><i class="fa fa-search"></i>
+							           </div>
+                                            <input type="text" class="form-control" placeholder="Client Search..." ng-model="search">
+                                  </div>      
+                              </div>
+                           </form>
+  &nbsp&nbsp&nbsp
+
+  <div layout="row" >
+ <md-icon ng-click="orderByMe('name')" md-svg-icon="assets/images/sort.svg"></md-icon>
+  
+  <div>
+  <a ui-sref="login">
+          <md-icon md-svg-icon="assets/images/power.svg"></md-icon>
+        </a></div></div>
+  
+                      </div>
+	              </div>
+	
+	          </md-toolbar>
+      
+              <br>
+              
+              
+              
+			 <!-- Mobiles Potrait Mode  -->
+  
+                               <div layout="row" layout-wrap layout-align="start center" flex>
+
+                                    <div class="md-3-line" ng-repeat="(key,value) in detailss | filter:search | orderBy:myOrderBy" layout="row" >
+                                           
+
+                                              <div  ng-click="pass(value.baseno,value.name)" class="box1" >
+							
+
+				                                    <div class="md-3-line compact">
+			
+                                                         <div layout ="row" >
+                                    <a ng-click="pass(value.baseno)" ui-sref="home.personal" style="text-align:center;color:blue;text-decoration:none;"><img ng-src="assets/images/profile.png" class="md-avatar image-circle" alt="assets/images/einstein.jpg" style="width:45px;height:45px;float:left;"/></a>
+				                                                            &nbsp
+                                                                    <div>
+                                                                        <a ng-click="pass(value.baseno,value.name)" ui-sref="home.dashboard" style="text-align:center;color:blue;text-decoration:none;"><font style="font-size:16px">{{value.name}}</font></a>
+                                                                    
+	 				                                               <p>     <a ng-click="pass(value.baseno,value.name)" ui-sref="home.dashboard" style="text-align:center;color:black;text-decoration:none;">  {{value.baseno}}</a> </p> 
+                                                                    </div>
+                                                         </div >
+													 
+					                                     <div ng-if="value.performperc<=0">
+                                                                 <h2 style="text-align:center;"> <a ng-click="pass(value.baseno,value.name)" ui-sref="home.dashboard" style="text-align:center;color:red;text-decoration:none;">{{value.performperc}}%</a></h2>
+                                                         </div>
+				                                         <div ng-if="value.performperc>0">
+                                                                 <h2 style="text-align:center;">  <a ng-click="pass(value.baseno,value.name)" ui-sref="home.dashboard" style="text-align:center;color:green;text-decoration:none;">{{value.performperc}}%</a></h2>
+                                                         </div>
+                  
+                                                         <div layout-xs="row"; layout-sm="row" ; layout-md="row" ; layout-lg="row" ; layout-xl="row" layout-align="space-around center">
+         
+                                                                   <md-icon md-svg-icon="assets/images/star.svg" ></md-icon>
+                                                                    &nbsp
+                                                                    <div class="num" layout-align="center center">
+                                                                     <a ng-click="pass(value.baseno,value.name)" ui-sref="home.dashboard" style="text-align:center;color:black;text-decoration:none;float:center;">{{value.bum}}</a></div>
+            &nbsp
+           <div>
+                                                               <div ng-if="value.count<1"> <md-icon md-svg-icon="assets/images/alert.svg" ></md-icon></div>
+			                                                   <div ng-if="value.count>0"> <md-icon ui-sref="home.alerts" ng-click="pass(value.baseno)" md-svg-icon= "assets/images/alert1.svg" style="width:15px;height:20px;float:left;" ></md-icon></div>
+			   </div>
+                                                         </div>
+
+                                                   </div>
+                                              </div>
+
+					                                
+
+			                      </div>
+	
+			                 </div>
+			                 
+			                 
+			                 
+			                 
+			                 
+			                 
+			                      </md-content>
+      
+ </div>
+ </div>
+ 
+ 
+ <style>
+ .full{
+ height: 100vh;
+ }
+ .num{
+ width: 80px;
+ text-align: center;
+ }
+	
+.search1 {
+background: linear-gradient(#828080, black);
+margin-right: 20px;}
+
+
+}
+.success {
+background-color:#003263;
+margin-right: 0px;
+height:5px;
+
+}
+p {
+    margin: 10px 0 0 0;
+}
+h4 {
+    margin: 10px 0 0 0;
+}
+img{
+border-radius: 50%;
+}
+
+</style>

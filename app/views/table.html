@@ -1,0 +1,161 @@
+<html>
+<head>
+<style>
+.btn-size {
+    width:5px;
+   
+}
+::-webkit-scrollbar {
+    width: 0.4em;
+}
+ 
+::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+}
+ 
+::-webkit-scrollbar-thumb {
+  background-color: #000000;
+  outline: 1px solid #003263;
+}
+
+.hello { background-color: #3C7193;}
+.button {
+
+	background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 20px 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+	
+    margin: 4px 2px;
+    -webkit-transition-duration: 0.5s; /* Safari */
+    transition-duration: 0.4s;
+    cursor: pointer;
+}
+.button5 {
+    background-color: #fafafa;
+    color: black;
+    border: 1px solid #b2b2b2;
+}
+.button5:hover {
+    background-color: #808080;
+    color: white;
+}
+md-divider{
+
+background-color: #ffffff;
+
+}
+
+</style>
+</head>
+<body>
+<div ng-controller="TableController" ng-cloak>
+<!-- IPAD -->
+
+
+<md-toolbar style="background-color: #000000; " >
+      <div class="md-toolbar-tools" layout-align="space-between center">
+      
+         <md-button aria-label="Go Back" ui-sref="home.profile" >
+         <md-icon md-menu-origin="" md-svg-icon="assets/images/home.svg"></md-icon>
+        </md-button>
+		<h4>
+		<font color='white'>{{baseName}}</font>
+		</h4>
+		
+       <div layout="row"layout-align="start center">
+                <a href="">
+                <md-icon md-svg-icon="assets/images/Twitter.svg"></md-icon>
+      </a>
+&nbsp;
+         
+         <a href="">
+          <md-icon md-svg-icon="assets/images/gmail.svg"></md-icon>
+        </a>
+   &nbsp;
+    <!--   <a href="">
+          <md-icon md-svg-icon="assets/images/skype.svg"></md-icon>
+        </a> 
+&nbsp;  -->  
+          <a href="">
+          <md-icon md-svg-icon="assets/images/maps.svg"></md-icon>
+        </a>
+&nbsp; 
+       <a>
+          <md-icon md-svg-icon="assets/images/questionmark.svg"></md-icon>
+        </a>
+&nbsp;
+            <div  layout-align="end center" layout="column">
+   
+  <div  layout-wrap="" layout="row" layout-fill="" layout-align="space-between center" >
+      
+      <div layout="column" layout-align="center center">
+        
+        <md-menu md-offset="0 -7">
+          <md-button class="md-icon-button" ng-click="$mdOpenMenu($event)">
+            <md-icon md-svg-icon="assets/images/dts3.svg"></md-icon>
+          </md-button>
+          <md-menu-content width="2" style=" background-color: #003263">
+            <md-menu-item >
+              <md-button  style=" background-color: #003263"  ng-click="">   <font color='white'> Settings</font> </md-button>
+               
+            </md-menu-item>
+			<md-divider></md-divider>
+            <md-menu-item >
+              <md-button  style=" background-color: #003263" ui-sref="login"  ng-click="">  <font color='white'>  Logout </font></md-button>
+               
+           </md-menu-item>
+          </md-menu-content>
+        </md-menu>
+      </div>
+    </div>
+  </div> 
+        </div>
+      </div>
+    </md-toolbar> 
+
+<div layout="row"  layout-align=" start center" >
+<div layout="column">
+     <button style="background-color:#003263" class="button" ui-sref="home.dashboard" ">
+      <md-icon md-menu-origin="" md-svg-icon="assets/images/backw.svg"></md-icon>
+        </button>
+<div layout="column" layout-align="center center" >
+        
+      
+      </div></div>
+
+ <panel-widget  class ="hello" ltitle="Details" template="app/views/partials/relationship1.html" flex ></panel-widget> </div>
+  <div layout="row" layout-align="end end">
+   <md-menu md-offset="0 -7"  style=" background-color: #003263">
+          <md-button class="md-icon-button"  ng-click="$mdOpenMenu($event)">
+            <md-icon md-menu-origin="" md-svg-icon="assets/images/menu.svg"></md-icon>
+          </md-button>
+          <md-menu-content width="2" style=" background-color: #003263">
+            
+             <md-menu-item >
+              <md-button  style=" background-color: #003263" ng-click="view('Bubble')"><font color='white'>  Bubble chart </font></md-button>
+               
+           </md-menu-item>
+		   <md-divider></md-divider>
+            <md-menu-item >
+              <md-button style=" background-color: #003263" ng-click="view('Table')"> <font color='white'> Table</font> </md-button>
+               
+            </md-menu-item>
+<md-divider></md-divider>
+           
+           
+          </md-menu-content>
+        </md-menu>
+ </div>
+<div ng-show= "bubble" ng-include='"bubble.html"'></div>
+<div ng-show= "table" ng-include='"subasset.html"'></div>
+</div>
+</div>
+</body>
+
+
+</html>

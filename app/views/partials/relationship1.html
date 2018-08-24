@@ -1,0 +1,37 @@
+<style>
+
+.hello { background-color: #3C7193;}
+</style>
+
+<div  ng-controller="RelationshipController ">
+
+  <md-content class="md-padding hello">
+  
+<div layout="row" layout-xs="column" layout-align="space-between center">
+   <div>
+    <p><font style="font-size:16px" color='white'>Investment Amount:
+      <b>{{va.Investment | number :0}}</b>
+   </font> </p>
+    <p><font style="font-size:16px" color='white'>Unrealized Gain&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp:
+      <b>{{va.ugain | number :0}}</b>
+   </font> </p> </div> 
+    
+     <div>
+    <p><font style="font-size:16px" color='white'>Realized Gain:
+      <b>{{va.rgain | number :0}}</b>
+   </font> </p>
+    <p><font style="font-size:16px" color='white'>Current Value&nbsp&nbsp:
+      <b>{{va.Currentvalue | number :0}}</b>
+   </font> </p>   </div> 
+    
+    
+    
+    
+    
+    
+     </div>
+    
+    
+    
+  </md-content>
+

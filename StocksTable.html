@@ -1,0 +1,62 @@
+<div ng-controller="SearchController as vm" style="padding:5px;display:table;" layout-align="center center">
+<style>
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+th, td {
+    padding: 8px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+</style>
+
+<table  style="margin:5px;"cellspacing="20" width="100%"  >
+        
+        <tbody>
+            <tr >
+                <td><b>Assets</b></td>
+                <td><b>{{vm.a | number}}</b></td>
+                <td><font color="red"><b>{{vm.ap}}%</b></font></td>
+                
+            </tr>
+            <tr>
+                <td>Fixed Income</td>
+                <td>{{vm.fi| number}}</td>
+              <td><font color="red"><b>{{vm.fip}}%</b></font></td>
+                
+            </tr>
+            <tr>
+                <td>Real Estate</td>
+                <td>{{vm.re| number}}</td>
+               <td><font color="red"><b>{{vm.rep}}%</b></font></td>
+                
+            </tr>
+            <tr>
+                <td>Stocks</td>
+                <td>{{vm.s| number}}</td>
+                <td><font color="red"><b>{{vm.sp}}%</b></font></td>
+                
+            </tr>
+            </tbody>
+            </table>
+
+
+
+
+</div>
+
+
+
+<div>
+<md-content layout="row" layout-align="center center">
+  <md-button class="md-raised md-warn" >
+        Assets
+    </md-button>
+     <md-button class="md-raised md-warn" disabled>
+        Products
+    </md-button>
+  </md-content>
+
+</div>

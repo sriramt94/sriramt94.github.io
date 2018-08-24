@@ -1,0 +1,141 @@
+<!doctype html>
+<html class="no-js" ng-app="angularMaterialAdmin">
+  <head>
+    <meta charset="utf-8">
+    <title>Angular</title>
+    <meta name="description" content="Angular admin dashboard with material design">
+    <meta name="author" content="flatlogic.com">
+    <meta name="viewport" content="width=device-width">
+
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+
+    <!-- build:css({.tmp/serve,src}) styles/vendor.css -->
+    <!-- bower:css -->
+    <link rel="stylesheet" href="style.css" />
+     <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="bower_components/nvd3/build/nv.d3.css" />
+    <link rel="stylesheet" href="bower_components/angular-material/angular-material.min.css" />
+	  <link href="app/stylesheets/colorpicker.min.css" rel="stylesheet">
+
+    
+
+
+  
+    <!-- endbower -->
+    <!-- endbuild -->
+
+    <!-- build:css({.tmp/serve,src}) styles/app.css -->
+    <!-- inject:css -->
+    <!-- css files will be automaticaly insert here -->
+    <!-- endinject -->
+    <!-- endbuild -->
+ 
+  </head>
+  <body>
+    <!--[if lt IE 10]>
+      <p>You are using an <strong>outdated</strong> browser. Please
+        <a href="http://browsehappy.com/">upgrade your browser</a>
+        to improve your experience.</p>
+    <![endif]-->
+
+    <div ui-view layout="row" layout-fill></div>
+
+    <!-- build:js(src) scripts/vendor.js -->
+    <!-- bower:js -->
+    
+    <script type="text/javascript" src="cordova.js"></script>
+    <script type="text/javascript" src="js/index.js"></script>
+    <script src="bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="bower_components/angular/angular.min.js"></script>
+    
+
+
+
+    	  
+
+    <!-- endbower -->
+    <!-- endbuild -->
+
+    <!-- build:js({.tmp/serve,.tmp/partials,src}) scripts/app.js -->
+    <!-- inject:js -->
+    <script src="app/app.js"></script>
+    
+ <script type="text/javascript" src="app/Encryption.js"></script>
+ <script type="text/javascript" src="format.js"></script>
+ <script src="app/controllers/ReportsController.js"></script>
+
+    <script src="app/components/directives/panelWidget.js"></script>
+	
+   
+    <script src="app/components/services/LoginService.js"></script>
+      <script src="app/components/services/NavService.js"></script>
+    <script src="app/components/services/CountriesService.js"></script> 
+       <script src="app/components/services/StoreService.js"></script> 
+  <script src="app/controllers/ResetController.js"></script> 
+    <script src="app/controllers/LoginController.js"></script> 
+	    <script src="app/controllers/AlertsController.js"></script>
+          <script src="app/controllers/TableController.js"></script>
+    <script src="app/controllers/PortfolioController.js"></script>
+    <script src="app/controllers/ListController.js"></script>
+	      <script src="app/controllers/CalenderController.js"></script>
+	        <script src="app/controllers/RelationshipController.js"></script>
+
+	<script src="app/controllers/PersonalController.js"></script> 
+	  <script src="app/controllers/TransactionsController.js"></script>
+     <script src="app/controllers/UsageController.js"></script>
+    <script src="app/controllers/BubbleController.js"></script>
+    <script src="app/controllers/MainController.js"></script>
+
+  
+       
+    
+    <script src="app/index.js"></script>
+
+
+
+    <script src="bower_components/angular-animate/angular-animate.min.js"></script>
+    <script src="bower_components/angular-cookies/angular-cookies.min.js"></script>
+    <script src="bower_components/angular-touch/angular-touch.min.js"></script>
+    <script src="bower_components/angular-sanitize/angular-sanitize.min.js"></script>
+    <script src="bower_components/angular-ui-router/release/angular-ui-router.min.js"></script>
+    <script src="bower_components/d3/d3.min.js"></script>
+    <script src="bower_components/nvd3/build/nv.d3.min.js"></script>
+    <script src="bower_components/angular-nvd3/dist/angular-nvd3.min.js"></script>
+    <script src="bower_components/angular-aria/angular-aria.min.js"></script>
+    <script src="bower_components/angular-messages/angular-messages.min.js"></script>
+    <script src="bower_components/angular-material/angular-material.min.js"></script>
+    <script src="bower_components/bootstrap/bootstrap.min.js"></script>
+    
+    <script src="bower_components/calender/moment.min.js"></script>
+    <script src="bower_components/calender/interact.min.js"></script>
+    <script src="bower_components/calender/ui-bootstrap-tpls.min.js"></script>
+    <script src="bower_components/calender/rrule.js"></script>
+    <script src="bower_components/calender/bootstrap-colorpicker-module.min.js"></script>
+    <script src="bower_components/calender/angular-bootstrap-calendar-tpls.min.js"></script>
+    
+    
+    
+    
+    
+    
+    
+    <script src="bower_components/angular-mocks/angular-mocks.js"></script>
+    <script src="bower_components/highcharts/highcharts.js"></script>
+    <script src="bower_components/highcharts/highcharts-more.js"></script>
+    <!--<script src="bower_components/highcharts/exporting.js"></script>-->
+    <script src="scripts/ng-coverflow.js"></script>
+    <script src="scripts/ng-coverflow.templates.js"></script>
+    <script src="scripts/ng-coverflow.utils.js"></script>
+ 
+   
+
+    <!-- endinject -->
+
+    <!-- inject:partials -->
+    <!-- angular templates will be automatically converted in js and inserted here -->
+    <!-- endinject -->
+    <!-- endbuild -->
+
+  </body>
+</html>

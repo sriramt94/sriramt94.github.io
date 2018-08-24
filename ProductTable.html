@@ -1,0 +1,123 @@
+
+<div  ng-controller="PortfolioController as vm">
+
+<style>
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+::-webkit-scrollbar {
+    width: 0.4em;
+}
+::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+}
+ 
+::-webkit-scrollbar-thumb {
+  background-color: #000000;
+  outline: 1px solid #003263;
+}
+.table2 {
+   height: 450px;
+    background-color: #003263;
+}
+
+.border {
+
+ width: 100%;
+    padding: 6px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: 10px solid black;
+    border-radius: 20px;
+
+}
+.table1 {
+   height: 700px;
+    width: 100%;
+}
+
+.align{
+    text-align: right;
+}
+
+th, td {
+    padding: 8px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+.hello { background-color: #3C7193;}
+.success { background-color: #003263;}
+
+
+.search1 {
+background: linear-gradient(#828080, black);
+
+}
+.hello { background-color: #3C7193;}
+.success { background-color: #003263;}
+
+.hello { background-color: #3C7193;}
+
+</style>
+
+
+ 
+<div flex    title="CompanyDetails" class="hello" >
+
+
+
+
+      
+      
+       
+      
+      
+      <md-content class="table2">
+      
+     <table bgcolor="#003263" >
+      <!--  style="width:100%"-->
+     
+  <tr bgcolor="#003263"> <font color='white'>
+    <th><font color='white'> Name</font></th>
+    <th class="align"><font color='white'> Investment Amount</font></th>
+    <th class="align"><font color='white'>Current Value</font></th>
+    <th class="align"><font color='white'>Realized Gain</font></th>
+     <th class="align"><font color='white'>Unrealized Gain</font></th>
+     <th></th>
+  </tr>
+  <tr ng-repeat="sub in fund1">
+
+    <td><font color='#4bfc05'>{{sub.assetName }}</font></td>
+    <td class="align"><font color='white'>{{sub.investment_amt | number:0}}</font></td>
+    <td class="align"><font color='white'>{{sub.current | number:0}}</font></td>
+    <td class="align"><font color='white'>{{sub.r_gain | number:0}}</font></td>
+    <td class="align"><font color='white'>{{sub.unrealized_gain | number:0}}</font></td>
+  <td>
+   <a  ng-click="code(sub.astCode,'SubProduct',sub.assetName,'Product')" ui-sref="home.table" style="text-decoration:none;  color:#000000;"><md-icon md-menu-origin="" md-svg-icon="assets/images/righta.svg"></md-icon></a>
+  </td>
+  </tr>
+
+</table>
+    
+    </md-content>
+    
+    
+    
+      
+     </div>
+    
+    
+    
+    
+  
+
+
+
+
+
+
+
+</div>
+</div>

@@ -1,0 +1,35 @@
+ <style>
+ .pop-up{
+background-color:#3C7193;
+}
+.outer-pop-up
+{
+background-color:#003263;
+}
+ </style>
+ 
+ <div class="outer-pop-up">
+        <h3 class="modal-title outer-pop-up"></h3>
+      </div>
+      <div class="modal-body outer-pop-up">
+        
+   
+        <p style="color:white";> &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp Event:
+        <pre style="color:white"; class="pop-up">
+        Name: {{ vm.event.title}} 
+        From: {{ vm.event.startsAt}}
+        To:  {{ vm.event.endsAt}}
+        Event Id: {{ vm.event.calendarEventId}}
+        Location: {{vm.event.location}}
+        Status: {{vm.event.meetstatus}}
+        Contact Details: {{vm.event.contactdet}}
+      </pre>
+        </p>
+      </div>
+      <style>
+      .modal-body{
+      width: 550px;
+      }
+      </style>
+     
+    

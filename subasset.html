@@ -1,0 +1,163 @@
+
+<div  ng-controller="BubbleController as vm">
+
+<style>
+::-webkit-scrollbar {
+    width: 0.4em;
+}
+ 
+::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+}
+ 
+::-webkit-scrollbar-thumb {
+  background-color: #000000;
+  outline: 1px solid #003263;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+.table2 {
+   height: 600px;
+    background-color: #003263;
+}
+
+.border {
+
+ width: 100%;
+    padding: 6px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: 10px solid black;
+    border-radius: 20px;
+
+}
+.table1 {
+   height: 700px;
+    width: 100%;
+}
+.table2 {
+   height: 600px;
+    background-color: #003263;
+}
+
+
+th, td {
+    padding: 8px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+.hello { background-color: #3C7193;}
+.success { background-color: #003263;}
+
+
+.search1 {
+background: linear-gradient(#828080, black);
+
+}
+.hello { background-color: #3C7193;}
+.success { background-color: #003263;}
+
+.hello { background-color: #3C7193;}
+
+.align{
+    text-align: right;
+}
+
+</style>
+
+
+ 
+<div flex    title="CompanyDetails" class="hello" >
+
+
+
+
+      
+      
+       
+      
+      
+      <md-content class="table2">
+      
+     <table ng-if="x" bgcolor="#003263" >
+      <!--  style="width:100%"-->
+     
+  <tr bgcolor="#3C7193"> <font color='white'>
+      <th ng-show="button1" ng-click="back1()" style="text-decoration:none;  color:#000000;"><md-icon md-menu-origin="" md-svg-icon="assets/images/arrowl.svg"></md-icon></th>
+    <th><div ng-click="orderByMe('astName')"><font color='white'> Name</font></div></th>
+    <th class="align"><div ng-click="orderByMe('InvVal')"><font color='white'> Investment Amount</font></div></th>
+    <th class="align"><div ng-click="orderByMe('CurVal')"><font color='white'>Current Value</font></div></th>
+    <th class="align"><div ng-click="orderByMe('RGain')"><font color='white'>Realized Gain</font></div></th>
+     <th class="align"><div ng-click="orderByMe('URGain')"><font color='white'>Unrealized Gain</font></div></th>
+     <th ng-show="button"></th>
+      <th ng-show="button1"></th>
+  </tr>
+  <tr ng-repeat="sub in subasset | orderBy:myOrderBy:reverse ">
+ <td ng-show="button1" ></td>
+    <td><font color='#4bfc05'><a  >{{sub.astName}}</a></font></td>
+    <td class="align"><font color='white'>{{sub.InvVal | number:0}}</font></td>
+    <td class="align"><font color='white'>{{sub.CurVal | number:0}}</font></td>
+    <td class="align"><font color='white'>{{sub.RGain | number:0}}</font></td>
+    <td class="align"><font color='white'>{{sub.URGain | number:0}}</font></td>
+  <td ng-show="button">
+  <a ng-click="sa(sub.astcode)"  style="text-decoration:none;  color:#000000;"><md-icon md-menu-origin="" md-svg-icon="assets/images/righta.svg"></md-icon></a>
+   </td>
+   <td ng-show="button1">
+  <a ng-click="select(sub.subassetcode)"  style="text-decoration:none;  color:#000000;"><md-icon md-menu-origin="" md-svg-icon="assets/images/righta.svg"></md-icon></a>
+   </td>
+ <br></br>
+  
+  </tr>
+
+</table>
+    <div ng-if="table">
+   <!--  
+   <div ng-click="back()"  style="text-decoration:none;  color:#000000;"><md-icon md-menu-origin="" md-svg-icon="assets/images/righta.svg"></md-icon></div>
+    
+    --> 
+    
+    
+  <table bgcolor="#003263" > <!--  style="width:100%"-->
+  <tr bgcolor="#3C7193"> <font color='white'>
+    <th ng-click="back()" style="text-decoration:none;  color:#000000;"><md-icon md-menu-origin="" md-svg-icon="assets/images/arrowl.svg"></md-icon></th>
+     <th><font color='white'>Txn Type </font></th>
+    <th><font color='white'>Txn Date</font></th> 
+    <th class="align"><font color='white'>Price</font></th>
+     <th class="align"><font color='white'>Units</font></th>
+     <th class="align"><font color='white'>Amount</font></th>
+  </tr>
+  <tr ng-repeat="item in selected">
+   <td></td>
+    <td><font color='#4bfc05'>{{item.transaction_type}}</font></td>
+    <td><font color='white'>{{item.trans_date}}</font></td> 
+    <td class="align"><font color='white'>{{item. price}}</font></td>
+    <td class="align"><font color='white'>{{item.units}}</font></td>
+    <td class="align"><font color='white'>{{item.investment_amt | number:0}}</font></td> 
+  </tr>
+  
+</table>
+</div>
+    </md-content>
+    
+    
+    
+      
+     </div>
+    
+    
+    
+    
+  
+
+
+
+
+
+
+
+</div>
+</div>

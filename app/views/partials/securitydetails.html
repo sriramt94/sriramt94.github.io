@@ -1,0 +1,41 @@
+<style>
+
+.hello { background-color: #3C7193;}
+.success { background-color: #003263;}
+
+</style>
+
+<div ng-show="bubble" style="min-width: 500px; max-width: 1126px; margin: 0 auto" ng-controller="BubbleController">
+
+  <md-content class="md-padding hello">
+      <div layout-align="space between center" >
+     
+     <table bgcolor="#003263" class="rcorners1" align="center" style="width:100%"> <!--  style="width:100%"-->
+  <tr bgcolor="#07abf2"><font color='white'>
+    <th><font color='white'>TXN Type</font></th>
+    <th><font color='white'>TXN Date</font></th> 
+    <th><font color='white'>Price</font></th>
+     <th><font color='white'>Units</font></th>
+
+  </tr>
+  <tr ng-repeat="z in details" align="center">
+    <td><font color='#4bfc05'>{{z.type}}</font></td>
+    <td><font color='white'>{{z.date}}</font></td> 
+    <td><font color='white'>{{z.price}}</font></td>
+    <td><font color='white'>{{z.units}}</font></td>
+  
+  </tr>
+  
+</table>
+    
+   
+    </div>
+    
+    
+      
+     </div>
+    
+    
+    
+    
+  

@@ -1,0 +1,25 @@
+<style>
+
+.hello { background-color: #3C7193;}
+</style>
+
+<md-content ng-controller="UsageController as vm"  flex layout-xs="column" layout-sm="row" style="background-color:#003263" layout-align="center center" class="hello">
+
+  <div >
+
+ 
+   <h3 class="donut-chart-title"  align="justify"><font style="font-size:18px" color='white'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Product Distribution<font color='white'></h3>
+    <nvd3 hide-lg options="vm.chartOptions1" data="ramChartData1"></nvd3>
+        <nvd3 hide-md options="vm.chartOptions2" data="ramChartData1"></nvd3>
+    
+    
+  </div>
+ </br>
+ 
+<div >
+ <!--<h3 class="donut-chart-title"  align="justify"><b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Model</b></h3>  
+ <nvd3 options="vm.chartOptions" data="storageChartData"></nvd3>
+
+  </div> -->
+</md-content>
+

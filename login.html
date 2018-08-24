@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+       <link rel='stylesheet prefetch' href='bower_components/bootstrap/reset.min.css'>
+    
+    <link rel='stylesheet prefetch' href='bower_components/bootstrap/bootstrap.min.css'>
+
+<style>
+
+.bg-1 { 
+    background-color: #003263;  /* Green */
+    color: #ffffff;
+}
+.center {
+    position: absolute;
+    left: 0;
+    top: 35%;
+    width: 100%;
+    
+}
+
+body{
+ background-color: #003263;
+  font-family: 'Roboto', sans-serif;
+
+}
+
+.right {
+    position: absolute;
+    right: 0px;
+    margin-right:20px;
+    
+}
+</style>
+
+</head>
+<body >
+
+<div class="center bg-1">
+<div class="col-md-12" ng-controller="loginController"  >
+      <h1 class="text-center">Angular Application</h1>
+      
+      <form class="form" ng-submit="formSubmit()">
+        <div class="col-md-4 col-md-offset-4">
+          <div class="form-group"  >
+            <input type="text" class="form-control" ng-model="rmid" placeholder="RM ID" required=""/>
+          </div> 
+
+          <div class="form-group"  ng-model="searchAll">
+            <input type="password" class="form-control" ng-model="password" placeholder="password" required=""/>
+          </div>
+<div layout= "row">
+          <div class="form-group" flex=50  >
+            <md-button  id="view-fullscreen" style="width:140px "type="submit" class="btn btn-success"><font style="font-size:18px">Login</font></md-button>
+            <span class="text-danger">{{ error }}</span>
+          </div>
+ <div  flex=50 >
+            <md-button style="width:140px" ng-click="clear()" class="btn btn-success"><font style="font-size:18px">Reset</font></md-button>
+            
+          </div>
+        </div>
+         <div>
+			<span style="cursor:pointer">
+		  <a style="text-align:center;color:white;text-decoration:none;cursor:hand;" ng-click="reset(rmid,password)" >&nbsp;&nbsp;&nbsp;&nbsp;Change Password</a></span>
+		  </div>
+        
+         </div>
+      </form>
+    </div>
+    </div>
+    </body>
+    </html>

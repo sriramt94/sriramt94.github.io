@@ -1,0 +1,27 @@
+<style>
+    .width{ width:230px;
+        height:450px;}
+.hello { background-color: #3C7193;}
+</style>
+
+<md-content ng-controller="UsageController as vm"  flex layout-xs="column" layout-sm="row" style="background-color:#003263" layout-align="center center" class="hello width">
+<div ng-if="y==1" >
+
+</div>
+  <div ng-if="y==2">
+
+   <h2 class="donut-chart-title" align="justify"><font color='white'><b> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Current</b></font></h2>
+    <nvd3 hide-lg options="vm.chartOptions7" data="ramChartData2"></nvd3>
+	<nvd3 hide-md options="vm.chartOptions8" data="ramChartData2"></nvd3>
+
+    
+  </div>
+ </br>
+ 
+<div >
+ <!--<h3 class="donut-chart-title"  align="justify"><b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Model</b></h3>  
+ <nvd3 options="vm.chartOptions" data="storageChartData"></nvd3>
+
+  </div> -->
+</md-content>
+

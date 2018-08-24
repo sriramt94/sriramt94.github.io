@@ -1,0 +1,18 @@
+<!--?xml version="1.0" standalone="no"?-->
+
+<svg version="1.0" xmlns="http://www.w3.org/2000/svg" width="300.000000pt" height="300.000000pt" viewBox="0 0 300.000000 300.000000" preserveAspectRatio="xMidYMid meet">
+<g transform="translate(0.000000,300.000000) scale(0.100000,-0.100000)" fill="#22242C" stroke="none">
+<path d="M522 1973 l3 -488 100 0 100 0 0 485 0 485 -103 3 -102 3 2 -488z" id="node1" class="node"></path>
+<path d="M1084 2218 c-129 -128 -234 -238 -234 -243 0 -11 471 -485 482 -485
+4 0 9 84 10 188 l3 187 563 3 562 2 0 93 c0 59 -4 97 -12 105 -9 9 -148 12
+-565 12 l-553 0 0 185 c0 130 -3 185 -11 185 -6 0 -117 -105 -245 -232z" id="node2" class="node"></path>
+<path d="M2265 1488 c-3 -7 -4 -229 -3 -493 l3 -480 100 0 100 0 3 479 c1 345
+-1 483 -9 492 -15 19 -187 20 -194 2z" id="node3" class="node"></path>
+<path d="M1657 1484 c-4 -4 -7 -90 -7 -191 l0 -183 -565 0 -566 0 3 -102 3
+-103 563 -3 562 -2 0 -184 c0 -102 4 -187 8 -190 5 -3 115 102 246 233 209
+209 237 241 227 257 -19 34 -467 475 -474 468z" id="node4" class="node"></path>
+</g>
+<g transform="translate(0.000000,300.000000) scale(0.100000,-0.100000)" fill="#FFFFFF" stroke="none">
+
+</g>
+</svg>

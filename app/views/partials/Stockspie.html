@@ -1,0 +1,32 @@
+
+
+<div layout="column">
+<md-content ng-controller="VisitorsController as vm" layout="row" layout-align="center center">
+    <nvd3 options="vm.chartOptions" data="vm.visitorsChartData"></nvd3>
+</md-content>
+
+<div  ng-controller="SearchController as vm"  >
+
+  <md-content class="md-padding" layout="column" layout-align="center center">
+  
+<h3><b>Stocks</b></h3>
+
+    <p>Current Value:
+      <b>{{vm.selectedCountry | number}}</b>
+    </p>
+    <p>% Change:
+      <b>{{vm.selectedCountrycode}}</b>
+    </p>
+  </md-content>
+  
+  <md-content layout="row" layout-align="center center">
+  <md-button class="md-raised md-warn" >
+        Assets
+    </md-button>
+     <md-button class="md-raised md-warn" disabled>
+        Products
+    </md-button>
+  </md-content>
+</div>
+
+</div>

@@ -1,0 +1,177 @@
+
+<style>
+    .a{
+        text-decoration: none;}
+    
+    .button5 {
+        background-color: #3C7193;
+        color: black;
+        border: 2px solid #808080;
+    }
+
+.button {
+    
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 5px 18px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 15px;
+    width:337px;
+    
+    margin: 5px 2px;
+    -webkit-transition-duration: 0.5s; /* Safari */
+    transition-duration: 0.4s;
+    cursor: pointer;
+    
+    
+}
+
+    </style>
+
+
+
+
+
+<div  ng-controller="PersonalController as vm" ng-cloak>
+<!--
+<md-button aria-label="Go Back" ui-sref="home.dashboard" >
+      <md-icon md-menu-origin="" md-svg-icon="assets/images/backspace.svg"></md-icon>
+        </md-button> -->
+
+
+<div layout="row"  layout-align="space-around center">
+
+   <div layout="column">
+   <div>
+   <br></br>
+   <br></br>
+     <img ng-src="assets/images/profile.png" class="md-avatar" alt="assets/images/profile.png" style="width:160px;height:140px;float:left;">
+    </div>
+    <div>
+    <br></br>
+   
+    <p><b><big><font color='white'>Contact Details
+    </font> </big> </b>
+    </p>
+     <p><b><font color='white'>Address
+      </font></b>
+    </p> 
+    <p><font color='white'>{{vm.Address1}}
+      </font>
+    </p>
+    <p><font color='white'>{{vm.Address2}}
+      </font>
+    </p>
+    <p><font color='white'>{{vm.Address3}}
+      </font>
+    </p>
+    <p><font color='white'>{{vm.Address4}}
+      </font>
+    </p>
+    <p><font color='white'>{{vm.Address5}}
+      </font>
+    <br></br>
+    </p>
+     <p><font color='white'>{{vm.Address6}}
+      </font>
+    </p>
+     <p><font color='white'>{{vm.Address7}}
+      </font>
+    </p>
+    
+     <p style="text-decoration:none; color:#ffffff;"><b><font color='white'>Zip&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp:</b>    {{vm.zip}}</font>   </p>
+    
+     <p style="text-decoration:none; color:#ffffff;"><b><font color='white'>Mobile1&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp:</b>
+      {{vm.mn}}</font>
+    </p>
+     <p style="text-decoration:none; color:#ffffff;"><b><font color='white'>Residence1&nbsp&nbsp:</b>
+    {{vm.r1}} </font> 
+    </p></div>
+    </div>
+      <div layout="column">
+      <br>
+      </br>
+      
+      <div><p><big><b><font color='white'>{{vm.name}}  </font></b></big>
+    
+    </p>
+    <br></br>
+    <p style="text-decoration:none; color:#ffffff;"><b><font color='white'>Base No&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</b>
+    {{vm.baseno}}  </font>
+    </p>
+     <p><b><font color='white'>Relationship Start Date&nbsp&nbsp&nbsp</b>
+    {{vm.rsd}}</font>  
+    </p>
+     <p><b><font color='white'>Date of birth&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</b>
+    {{vm.dob}} </font> 
+    </p>
+     <p><b><font color='white'>Anniversary&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</b>
+     {{vm.anni}}</font> 
+    </p>
+    </div>
+    <div layout="column" layout-align="space-between start">
+        
+        <md-button >
+          <md-icon md-svg-icon="assets/images/gmail.svg"></md-icon>
+         </md-button>
+         
+          <md-button >
+          <md-icon md-svg-icon="assets/images/call.svg"></md-icon>
+         </md-button>
+         
+         
+     <md-button >
+          <md-icon md-svg-icon="assets/images/Twitter.svg"></md-icon>
+         </md-button>
+         </div>
+         <div>
+     <p><b><big><font color='white'>Relationship Details
+    </font> </big> </b>
+    </p>     
+    <p><b><font color='white'>CIF Number&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp:</b>
+    &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp{{vm.cifno}} </font> 
+    </p>
+    <p><b><font color='white'>Holding Pattern&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp:</b>
+     &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp{{vm.hp}} </font> 
+    </p>
+    <p><b><font color='white'>Risk Profile&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp:</b>
+     &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp{{vm.riskp}}</font> 
+    </p>
+    <p><b><font color='white'>Risk Expiry&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp:
+     </b> &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp{{vm.riske}}</font> 
+    </p>
+    <p><b><font color='white'>Last Contacted Date&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp:</b>
+    &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp{{vm.lcd}}&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp </font> 
+    </p>
+         
+         
+         </div>
+         
+         
+      </div> 
+    
+
+
+    
+    
+    
+     </div>
+     <br></br>
+     <br></br>
+     
+     
+     <div  layout ="row" layout-xs="column" hide-gt-lg flex="100" ng-cloak>
+     
+     <button style="background-color:#3C7193;border: 2px solid #808080;" class="button button5" ui-sref="home.personal"><md-icon md-svg-src="assets/images/accc.svg"></md-icon><font color='white'>  Profile</font></button>
+     
+     <button style="background-color:#003263; border: 2px solid #808080;" class="button button5" ui-sref="home.dashboard"> <md-icon md-svg-src="assets/images/dashboardw.svg"></md-icon>&nbsp;<font color='white'> Portfolio</font> </button>
+     <button style="background-color:#003263; border: 2px solid #808080;" class="button button5" ui-sref="home.transactions" ><md-icon md-svg-src="assets/images/moneyw.svg"></md-icon> <font color='white'> Transactions</font> </button>
+     <button style="background-color:#003263; border: 2px solid #808080;" class="button button5" ui-sref="home.reports" ><md-icon md-svg-src="assets/images/reportsw.svg"></md-icon> <font color='white'> Reports</font> </button>
+     <button  style="background-color:#003263; border: 2px solid #808080;"class="button button5" ui-sref="home.calender" ><md-icon md-svg-src="assets/images/cw.svg"></md-icon> <font color='white'> Calendar</font></button>
+     <button style="background-color:#003263; border: 2px solid #808080;" class="button button5" ui-sref="home.alerts"> <md-icon md-svg-src="assets/images/warning.svg"></md-icon>&nbsp;<font color='white'> Alerts</font> </button>
+     
+     
+        </div>
